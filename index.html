@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AFSTI | Portfolio Home</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06110f; --panel:#0b1a16; --panel2:#0f221c; --text:#e7f2ee; --muted:#a8c0b7;
+  --line:#15352b; --green:#00c08b; --amber:#f7b500; --red:#ff5c66; --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"DM Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 800px at 20% 0%, rgba(0,192,139,.10), transparent 55%), var(--bg);color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:22px}
+h1{margin:0 0 6px 0;font-size:30px}
+p{margin:0;color:var(--muted);max-width:920px;line-height:1.35}
+.grid{display:grid;gap:14px}
+.grid3{grid-template-columns:repeat(3,1fr)}
+@media (max-width: 980px){.grid3{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+  border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+a{color:var(--green);text-decoration:none}
+a:hover{text-decoration:underline}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel);
+  padding:6px 10px;border-radius:999px;color:var(--muted);font-size:12px}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--green)}
+.dot.amber{background:var(--amber)}
+.dot.red{background:var(--red)}
+.table{width:100%;border-collapse:separate;border-spacing:0;margin-top:10px;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+.table th,.table td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.table th{text-align:left;background:rgba(255,255,255,.03);color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.table tr:last-child td{border-bottom:none}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill{border:1px solid var(--line);background:var(--panel2);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px}
+.callout{border-left:3px solid var(--green);padding:10px 12px;background:rgba(0,192,139,.07);border-radius:12px;margin-top:12px}
+.small{color:var(--muted);font-size:12px;line-height:1.35}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+      <div>
+        <h1>AFSTI Portfolio — Partner Home</h1>
+        <p>Read this page only for SteerCo. It summarizes: (1) what we think, (2) what is still unproven, (3) which VCs to push vs abandon. Each VC page carries the full ecosystem map, value-loss nodes, and 5 brick-level projects tied to trade constraints.</p>
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end">
+        <span class="badge"><span class="dot"></span><b>GO</b></span>
+        <span class="badge"><span class="dot amber"></span><b>CONDITIONAL</b></span>
+        <span class="badge"><span class="dot red"></span><b>ABANDON</b></span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Dynamic “what changed?” tracker</b>
+      <div class="pills">
+        <label class="pill" style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" data-store="home_confirm_malawi_meal" style="margin-top:2px"/> <span>Zambia: Malawi meal deficit & anchor buyers confirmed</span></label>
+        <label class="pill" style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" data-store="home_confirm_ng_rice_specs" style="margin-top:2px"/> <span>Nigeria: export spec/product shift feasibility confirmed</span></label>
+        <label class="pill" style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" data-store="home_confirm_tz_rules" style="margin-top:2px"/> <span>Tanzania: export reliability rules/playbook feasible</span></label>
+      </div>
+      <div class="small" style="margin-top:8px">Checkboxes save locally in your browser. Use for SteerCo “unknowns → knowns”.</div>
+    </div>
+
+    <table class="table">
+      <tr><th>Value chain</th><th>Status</th><th>1-line thesis</th><th>Link</th></tr>
+      <tr>
+        <td><b>Soya — Zambia</b></td>
+        <td><span class="badge"><span class="dot"></span> GO</span></td>
+        <td>Not an oil story — a meal offtake story: fix aggregation + secure Malawi/DRC meal sinks + reduce corridor volatility to lift utilization from ~50% → 80–90%.</td>
+        <td><a href="vc_soya_zambia.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Rice — Nigeria</b></td>
+        <td><span class="badge"><span class="dot amber"></span> CONDITIONAL</span></td>
+        <td>Export only if product/spec adaptation + policy credibility + risk-adjusted landed cost beats imports; otherwise keep as domestic substitution.</td>
+        <td><a href="vc_rice_nigeria.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Maize — Tanzania</b></td>
+        <td><span class="badge"><span class="dot amber"></span> CONDITIONAL</span></td>
+        <td>Corridor win depends on export reliability rules + quality hubs + seasonality storage; volatility kills contracts.</td>
+        <td><a href="vc_maize_tanzania.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Palm Oil — Côte d’Ivoire</b></td>
+        <td><span class="badge"><span class="dot"></span> GO</span></td>
+        <td>Lift upstream yield + mill efficiency + export-grade refining + corridor depots to displace Asian supply via reliability and shorter working capital cycles.</td>
+        <td><a href="vc_palm_oil_civ.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Poultry — Southern Africa</b></td>
+        <td><span class="badge"><span class="dot amber"></span> CONDITIONAL</span></td>
+        <td>Downstream play: feed contracts + export-certified processing + cold chain + biosecurity; border delay variance is the killer.</td>
+        <td><a href="vc_poultry_southern_africa.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Wheat — Zimbabwe</b></td>
+        <td><span class="badge"><span class="dot amber"></span> HIGH CONDITIONAL</span></td>
+        <td>Only viable if irrigation+energy economics work and policy creates predictable export windows; otherwise abandon.</td>
+        <td><a href="vc_wheat_zimbabwe.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Cashew — Abidjan–Lagos</b></td>
+        <td><span class="badge"><span class="dot red"></span> ABANDON (corridor)</span></td>
+        <td>Export-processing economics; not a corridor trade unlock. Keep only if needed for coverage.</td>
+        <td><a href="vc_cashew_abl.html">Open</a></td>
+      </tr>
+      <tr>
+        <td><b>Dried Pulses — Upper Rift–Lobito</b></td>
+        <td><span class="badge"><span class="dot red"></span> ABANDON (corridor)</span></td>
+        <td>Better treated as export quality program; corridor trade not the main unlock.</td>
+        <td><a href="vc_dried_pulses_ur_lobito.html">Open</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="grid grid3" style="margin-top:14px">
+    <div class="card">
+      <b>How to read</b>
+      <ul class="small">
+        <li>Start with: Binding constraint + Trade constraint.</li>
+        <li>Projects are only valid if they remove the trade constraint.</li>
+        <li>Use “Abandon/Go” tab to decide fast.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <b>What will change next</b>
+      <ul class="small">
+        <li>Replace hypotheses with numbers from visits (utilization, deficits, landed costs).</li>
+        <li>Name actual sites (2–3 per project).</li>
+        <li>Convert “who could invest” into “who will invest” based on incentives.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <b>Partner asks</b>
+      <ul class="small">
+        <li>Are we solving <i>policy volatility</i> or pretending it doesn’t exist?</li>
+        <li>Do buyers confirm switching conditions (price, lead time, credit)?</li>
+        <li>Can the corridor deliver repeatability, not one-off shipments?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="small" style="margin-top:12px">Template: Dark AGRA-green, tabbed VC pages with nested project tabs. Local storage used for simple “dynamic” confirmation tracking.</div>
+</div>
+
+<script>
+document.querySelectorAll('input[data-store]').forEach(cb=>{
+  const k=cb.getAttribute('data-store');
+  cb.checked = localStorage.getItem(k)==='1';
+  cb.addEventListener('change', ()=>localStorage.setItem(k, cb.checked?'1':'0'));
+});
+</script>
+</body>
+</html>
